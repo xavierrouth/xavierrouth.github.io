@@ -41,3 +41,12 @@ nav a:hover {
 .content p {
     color: #474747;
 }
+.hidden {
+    position: relative;
+}
+
+#hidden-link {
+    display: inline;
+    color: #f5f5f5;
+}
+
