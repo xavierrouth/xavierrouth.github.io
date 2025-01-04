@@ -9,12 +9,14 @@
 
 <header>
     <h1>xavier routh</h1>
-    <a> xrouth2 [at] illinois [dot] edu</a>
+    <a>xrouth2@illinois.edu</a>
 </header>
 <nav>
     <a href="attachments/resume.pdf"> resume</a>
     <a href="https://github.com/xavierrouth"> github</a>
     <a href="projects.html">projects</a>
+    <a href="writing.html">writing</a>
+    <a href="personal.html">personal</a>
     <!--<a href="favorites.html">favorites</a> -->
 </nav>
 <div class="container">
@@ -32,5 +34,18 @@
     <!-- Add more blog posts here -->
 </div>
     
+<footer>
+    <p>Last updated: <span id="lastModified"></span></p>
+  </footer>
+  
+<script>
+fetch('https://api.github.com/repos/USERNAME/REPO/commits?path=index.html')
+    .then(response => response.json())
+    .then(data => {
+    const lastCommitDate = new Date(data[0].commit.author.date);
+    document.getElementById('lastModified').textContent = 
+        lastCommitDate.toLocaleDateString();
+    });
+</script>
 
 </html>
