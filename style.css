@@ -1,5 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap');
+
+/* Global font */
+html,
 body {
-    font-family: 'Times New Roman', Times, serif, sans-serif;
+    font-family: "Source Serif 4", serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+}
+
+body {
     margin: 0;
     padding: 0;
     color: #161616;
