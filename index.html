@@ -5,11 +5,41 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Xavier Routh</title>
 <link rel="stylesheet" type="text/css" href="style.css" />
+<style>
+    header .header-content {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        justify-content: center;
+    }
 
+    .profile-pic {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+
+    @media (max-width: 600px) {
+        .profile-pic {
+            width: 80px;
+            height: 80px;
+        }
+    }
+
+    .header-text {
+        text-align: center;
+    }
+</style>
 
 <header>
-    <h1>xavier routh</h1>
-    <a>xrouth2@illinois.edu</a>
+    <div class="header-content">
+        <img src="resources/headshot.jpg" alt="Portrait of Xavier Routh" class="profile-pic" loading="lazy">
+        <div class="header-text">
+            <h1>xavier routh</h1>
+            <a>xrouth2@illinois.edu</a>
+        </div>
+    </div>
 </header>
 <nav>
     <a href="attachments/resume.pdf"> resume</a>
