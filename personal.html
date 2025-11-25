@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Xavier Routh</title>
+<title>Personal - Xavier Routh</title>
 <link rel="stylesheet" type="text/css" href="style.css" />
 <style>
     header .header-content {
@@ -32,12 +31,11 @@
     }
 </style>
 <script src="loadNav.js" defer></script>
-
 <header>
     <div class="header-content">
         <img src="resources/headshot.jpg" alt="Portrait of Xavier Routh" class="profile-pic" loading="lazy">
         <div class="header-text">
-            <h1>xavier routh</h1>
+            <h1>personal</h1>
             <a>xrouth2@illinois.edu</a>
         </div>
     </div>
@@ -45,32 +43,22 @@
 <nav id="site-nav"></nav>
 <div class="container">
     <div class="content">
-        <p>Masters student in Computer Science at the University of Illinois, Urbana-Champaign. Studying with Prof.
-            Vikram Adve.
-            Generally interested in 1) building compilers and DSLs for interesting domains, including: hardware design,
-            secure multiparty computation, hyperdimensional computing, and machine learning. 2) making compilers and
-            DSLs easier to build.
-        </p>
-        <p>
-            Will be joining Annapurna Labs as a Compiler Engineer in 2026.
-        </p>
+        <h2>interests</h2>
+        <p>Outside of research: reading speculative fiction, distance running, learning about classical architecture,
+            and tinkering with small compilers.</p>
+        <h2>misc</h2>
+        <p>Occasionally experimenting with minimalist tooling, static sites, and language implementation patterns.</p>
     </div>
-    <!-- <div class="hidden">
-        <a href="favorites.html" id="hidden-link">favorites</a>
-    </div> -->
 </div>
-
 <footer>
     <p>Last updated: <span id="lastModified"></span></p>
 </footer>
-
 <script>
-    fetch('https://api.github.com/repos/xavierrouth/xavierrouth.github.io/commits?path=index.html')
-        .then(response => response.json())
-        .then(data => {
-            const lastCommitDate = new Date(data[0].commit.author.date);
-            document.getElementById('lastModified').textContent =
-                lastCommitDate.toLocaleDateString();
+    fetch('https://api.github.com/repos/xavierrouth/xavierrouth.github.io/commits?path=personal.html')
+        .then(r => r.json())
+        .then(d => {
+            const lastCommitDate = new Date(d[0].commit.author.date);
+            document.getElementById('lastModified').textContent = lastCommitDate.toLocaleDateString();
         });
 </script>
 
